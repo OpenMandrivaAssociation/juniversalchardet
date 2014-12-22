@@ -1,0 +1,50 @@
+--- build.xml	2008-07-23 14:46:29.000000000 +0200
++++ build.xml-gil	2013-01-21 11:49:53.832802087 +0100
+@@ -72,7 +72,7 @@
+ 		</javac>
+ 	</target>
+ 
+-	<target name="example" depends="dist">
++	<target name="example">
+ 		<javac	sourcepath=""
+ 				srcdir="${example}"
+ 				destdir="${example}"
+@@ -83,6 +83,10 @@
+ 			<exclude name="**/.svn/"/>
+ 			<exclude name="**/*Test.java"/>
+ 		</javac>
++		<jar	destfile="${dist}/juniversalchardet-example-${version}.jar"
++				basedir="${example}"
++				excludes="**/.svn/"
++		/>
+ 	</target>
+ 
+ 	<target name="dist" depends="compile">
+@@ -100,4 +104,27 @@
+ 			</fileset>
+ 		</delete>
+ 	</target>
++
++	<target name="javadoc">
++		<mkdir dir="${dist}/docs"/>
++		<tstamp>
++			<format property="year" pattern="yyyy" />
++		</tstamp>
++		<javadoc
++			destdir="${dist}/docs"
++			sourcepath="${src}"
++			access="protected"
++			old="false"
++			source="1.5"
++			verbose="false"
++			version="true"
++			use="true"
++			author="true"
++			windowtitle="juniversalchardet ${version} API">
++			<classpath refid="example.classpath"/>
++			<doctitle><![CDATA[<h2>juniversalchardet ${version} API</h2>]]></doctitle>
++			<bottom><![CDATA[<i>Copyright &#169; ${year}. All rights reserved</i>]]></bottom>
++		</javadoc>
++	</target>
++
+ </project>
