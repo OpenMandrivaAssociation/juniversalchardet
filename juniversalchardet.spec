@@ -1,7 +1,7 @@
 %{?_javapackages_macros:%_javapackages_macros}
 Name:          juniversalchardet
 Version:       1.0.3
-Release:       3.2
+Release:       3.3
 Summary:       A Java port of Mozilla's universalchardet
 Group:         Development/Java
 # ALL files are under MPL (v1.1) GPL license
