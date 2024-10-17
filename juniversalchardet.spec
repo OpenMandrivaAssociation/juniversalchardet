@@ -7,7 +7,7 @@ Group:         Development/Java
 # ALL files are under MPL (v1.1) GPL license
 # build.xml and c/* under MPL 1.1/GPL 2.0/LGPL 2.1 license
 License:       MPLv1.1 or GPLv2+ or LGPLv2+
-URL:           http://code.google.com/p/juniversalchardet/
+URL:           https://code.google.com/p/juniversalchardet/
 Source0:       http://juniversalchardet.googlecode.com/files/%{name}-%{version}.tar.gz
 Source1:       http://repo1.maven.org/maven2/com/googlecode/%{name}/%{name}/%{version}/%{name}-%{version}.pom
 # added javadoc task
